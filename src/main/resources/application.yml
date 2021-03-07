@@ -1,0 +1,14 @@
+application:
+  http-client:
+    employee:
+      base-url: https://employee-firebase.herokuapp.com/
+
+  api:
+    path: '/application/retrofit/v1/employees'
+
+server:
+  port: 9009
+
+logging:
+  level:
+    com.pe.relari.employeeretrofit: TRACE

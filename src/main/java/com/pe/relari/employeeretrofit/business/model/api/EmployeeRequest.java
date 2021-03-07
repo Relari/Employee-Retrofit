@@ -1,0 +1,33 @@
+package com.pe.relari.employeeretrofit.business.model.api;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+/**
+ *
+ */
+@Getter
+@Setter
+public class EmployeeRequest {
+
+  @NotBlank
+  @Size(min = 1, max = 50)
+  private String name;
+
+  @NotBlank
+  @Size(min = 1, max = 50)
+  private String position;
+
+  @NotBlank
+  @Pattern(regexp = "(M|F)")
+  private String sex;
+
+  @NotNull
+  private Double salary;
+
+}
